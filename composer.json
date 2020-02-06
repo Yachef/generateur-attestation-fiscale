@@ -1,0 +1,6 @@
+{
+    "require": {
+        "shuchkin/simplexlsx":"0.8.12",
+        "dompdf/dompdf":"0.8.4"
+    }
+}
