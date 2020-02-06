@@ -16,10 +16,10 @@
 
 <body id="generation-attestation">
     <div class = "d-flex align-items-center">
-    <a href="/index.php">
+    <a href="https://nosleepingboy.fr">
             <img src="/images/no_sleeping_boy.png" style="height:40px;margin:10px">
         </a>
-        <a href="/index.php" style="color:black;">No Sleeping Boy</a>
+        <a href="https://nosleepingboy.fr" style="color:black;">No Sleeping Boy</a>
         <a href="index.php" style = "margin-left: auto;">Revenir au générateur</a>
         <a href = "mentions-legales.php" class = "mr-3"style = "margin-left: auto;color:black;">Mentions Légales</a>
         <a href = "cgu.php" style = "color:black;"  class = "mr-3">CGU</a>

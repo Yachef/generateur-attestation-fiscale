@@ -185,9 +185,16 @@
                 foreach( $files_to_delete as $file){
                     unlink($file);
                 }
-                header("Content-Type: application/zip");
+
+                header("Pragma: public");
+                header("Expires: 0");
+                header("Cache-Control: must-revalidate, post-check=0, pre-check=0");
+                header("Cache-Control: public");
+                header("Content-Description: File Transfer");
+                header("Content-type: application/zip");
                 header("Content-Disposition: attachment; filename=$zipname");
                 header("Content-Length: " . filesize($zipname));
+                header("Content-Transfer-Encoding: binary"); 
                 readfile($zipname);
                 unlink($zipname);
             } else {
@@ -213,10 +220,10 @@
 
 <body id="generation-attestation">
     <div class = "d-flex align-items-center">
-    <a href="/index.php">
+    <a href="https://nosleepingboy.fr">
             <img src="/images/no_sleeping_boy.png" style="height:40px;margin:10px">
         </a>
-        <a href="/index.php" style="color:black;">No Sleeping Boy</a>
+        <a href="https://nosleepingboy.fr" style="color:black;">No Sleeping Boy</a>
         <a href = "mentions-legales.php" class = "mr-3"style = "margin-left: auto;color:black;"target = "_blank">Mentions Légales</a>
         <a href = "cgu.php" style = "color:black;" target = "_blank" class = "mr-3">CGU</a>
     </div>
