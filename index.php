@@ -1,6 +1,8 @@
 <?php
     require_once "vendor/autoload.php";
     use Dompdf\Dompdf;
+    use PHPMailer\PHPMailer\PHPMailer;
+    use PHPMailer\PHPMailer\Exception;
     class Client{
 
             public function __construct($ide,$nom,$prenom,$adresse,$cp,$ville){ 
@@ -59,6 +61,7 @@
         $DATE_SIGNATURE = $_POST["date_signature"];
         $NUMERO_AGREMENT = $_POST["num_agrement"];
         $DATE_AGREMENT = $_POST["date_agrement"];
+        $EMAIL = $_POST["email"];
         $ANNEE = "2019";
 
         $NOM_SIGNATAIRE = $NOM_SIGNATAIRE." ". $PRENOM_SIGNATAIRE;
@@ -175,7 +178,7 @@
                     $dompdf->render();
                     // Output the generated PDF to Browser
                     $pdf_file = $dompdf->output();
-                    $filename = "Attestation - " . $customerList[$i]->nom . "_". $customerList[$i]->prenom. '.pdf';
+                    $filename = "Attestation_". $customerList[$i]->nom . "_". $customerList[$i]->prenom."_".$i.'.pdf';
                     file_put_contents($filename, $pdf_file);
         
                     $zip->addFile($filename);
@@ -185,18 +188,29 @@
                 foreach( $files_to_delete as $file){
                     unlink($file);
                 }
+                $mail = new PHPMailer;
+                $mail->setFrom('yac@nosleepingboy.fr', 'No Sleeping Boy');
+                $mail->addReplyTo('yac@nosleepingboy.fr', 'No Sleeping Boy');
+                $mail->addAddress($EMAIL);
+                $mail->Subject = 'Vos attestations';
+                $mail->isHTML(true);
+                $mail->addAttachment($zipname);
+                $mailContent = "<p>Bonjour, Veuillez trouver ci-jointes vos attestations compressées.</p>
+                <p>Pour décompresser le fichier .zip, voici un tuto : https://www.youtube.com/watch?v=LWLLLIjxSOc</p>
+                <p>Pour tout bug ou questions, il vous suffira de répondre à ce mail !</p>
+                <p>Amicalement,</p>
+                <p>Yac de No Sleeping Boy</p>";
+                $mail->Body = $mailContent;
 
-                header("Pragma: public");
-                header("Expires: 0");
-                header("Cache-Control: must-revalidate, post-check=0, pre-check=0");
-                header("Cache-Control: public");
-                header("Content-Description: File Transfer");
-                header("Content-type: application/zip");
-                header("Content-Disposition: attachment; filename=$zipname");
-                header("Content-Length: " . filesize($zipname));
-                header("Content-Transfer-Encoding: binary"); 
-                readfile($zipname);
-                unlink($zipname);
+                // Send email
+                if(!$mail->send()){
+                    echo "<script>alert('L'email n'a pas pu être envoyé. Erreur: ' . $mail->ErrorInfo')</script>";
+                    unlink($zipname);
+                }else{
+                    unlink($zipname);
+                    header("Location: https://generateur-attestation.nosleepingboy.fr/mail.php");
+                    exit;
+                }
             } else {
                 echo "<script>alert('Erreur lors de la conversion du fichier uploadé, contactez l'administrateur. Error code : ".SimpleXLSX::parseError()."')</script>";
             }
@@ -214,7 +228,8 @@
 
     <link rel="icon" type="image/png" href="/images/no_sleeping_boy.png" />
     <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/styles.css">
 </head>
 
@@ -236,6 +251,7 @@
 
     <section style="background-color:#EDEDEB">
         <h2 class="title">Tutoriel</h2>
+        <h5 class  ="text-center text-primary font-weight-bold">NOUVEAUTE : Maintenant les attestations sont directement envoyées par email !</h5>
         <div class="d-flex justify-content-center container">
             <iframe width="520" height="375" allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" src="https://www.youtube.com/embed/RAfOjCEwUMg?autoplay=0">
             </iframe>
@@ -308,6 +324,13 @@
                 </div>
 
                 <div class="row form-group">
+                <div class="col">
+                        <label for="email">Email du signataire</label>
+                        <input type="email" class="form-control" name="email"
+                            required placeholder = "exemple@gmail.com">
+                        <small name="emailHelp" class="form-text text-muted"> Email où seront envoyées les attestations</small>
+
+                    </div>
                     <div class="col">
                         <label for="role">Fonction du signataire</label>
                         <input type="text" class="form-control" name="role"

@@ -10,7 +10,8 @@
 
     <link rel="icon" type="image/png" href="/images/no_sleeping_boy.png" />
     <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/styles.css">
 </head>
 
