@@ -246,7 +246,8 @@
     <div class="text-center container">
         <p class="mb-0">Générez les attestations fiscales de service à la personne en PDF pour TOUS vos clients en <span
                 class="font-weight-bold">2 min</span> chrono !</p>
-        <p class="text-danger font-weight-bold">Service 100% GRATUIT, SANS INSCRIPTION, et SANS AUCUN stockage de données !</p>
+        <p class="text-danger font-weight-bold mb-0">Service 100% GRATUIT, SANS INSCRIPTION, et SANS AUCUN stockage de données !</p>
+
     </div>
 
     <section style="background-color:#EDEDEB">
@@ -267,7 +268,9 @@
     </section>
     <section class = "mb-5">
         <h2 class="title">Le Générateur</h2>
-        <p class="text-danger font-weight-bold text-center">ATTENTION : Il est conseillé de regarder le tutoriel afin de remplir ce formulaire correctement !</p>
+        <p class="text-danger font-weight-bold text-center mb-0">ATTENTION : Il est conseillé de regarder le tutoriel afin de remplir ce formulaire correctement !</p>
+        <p class = "mt-0 text-center">Nous ne pourrons en aucun cas être tenus responsables de la conformité des attestations générées. </p>
+
         <div class="container">
             <form method = "post" action = "#" enctype="multipart/form-data">
                 <h4 class="font-italic mb-0">L'entreprise</h4>
