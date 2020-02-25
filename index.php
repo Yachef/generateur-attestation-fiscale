@@ -204,7 +204,7 @@
 
                 // Send email
                 if(!$mail->send()){
-                    echo "<script>alert('L'email n'a pas pu être envoyé. Erreur: ' . $mail->ErrorInfo')</script>";
+                    echo "<script>alert('L email n a pas pu être envoyé. Erreur: " . $mail->ErrorInfo."')</script>";
                     unlink($zipname);
                 }else{
                     unlink($zipname);
@@ -226,17 +226,16 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Générateur d'attestations fiscales</title>
 
-    <link rel="icon" type="image/png" href="/images/no_sleeping_boy.png" />
-    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
-    <!-- <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet"> -->
+    <link rel="icon" type="image/png" href="images/no_sleeping_boy.png" />
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body id="generation-attestation">
     <div class = "d-flex align-items-center">
     <a href="https://nosleepingboy.fr">
-            <img src="/images/no_sleeping_boy.png" style="height:40px;margin:10px">
+            <img src="images/no_sleeping_boy.png" style="height:40px;margin:10px">
         </a>
         <a href="https://nosleepingboy.fr" style="color:black;">No Sleeping Boy</a>
         <a href = "mentions-legales.php" class = "mr-3"style = "margin-left: auto;color:black;"target = "_blank">Mentions Légales</a>
