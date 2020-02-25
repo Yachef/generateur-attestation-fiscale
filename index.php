@@ -368,7 +368,7 @@
        Un Bug ou une question ? Contactez moi à l'adresse : <strong><a href = "mailto:yachef.h@gmail.com" class = "text-white">yachef.h@gmail.com</a></strong> !
     </div>
 </footer>
-<script src="/assets/jquery.min.js"></script>
-<script src="/assets/bootstrap/js/bootstrap.min.js"></script>
-<script src="/js/script.js"></script>
+<script src="assets/jquery.min.js"></script>
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="js/script.js"></script>
 </html>
