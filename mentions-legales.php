@@ -31,7 +31,7 @@
 
     <p>HADJAL Yacine, Microentreprise immatriculée au RCS de Lyon sous le numéro 834 658 775 et dont le siège social se situe 3, Avenue Albert Einstein, 69100 Villeurbanne</p>
 
-    <p>Email : <a href = "mailto:yac@nosleepingboy.fr">yac@nosleepingboy.fr</a></p>
+    <p>Email : <a href = "mailto:yachef.h@gmail.com">yachef.h@gmail.com</a></p>
 
     <h3>Directeurs de publication</h3>
 

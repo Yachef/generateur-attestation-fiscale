@@ -35,7 +35,7 @@
 
 <footer class="fixed-bottom" style="background-color:#343C3E;">
     <div class="text-center text-white" style="margin:5px">
-        Un Bug ou une question ? Contactez moi à l'adresse : <strong><a href="mailto:yac@nosleepingboy.fr"
+        Un Bug ou une question ? Contactez moi à l'adresse : <strong><a href="mailto:yachef.h@gmail.com"
                 class="text-white">yac@nosleepingboy.fr</a></strong> !
     </div>
 </footer>

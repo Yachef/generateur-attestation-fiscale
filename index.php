@@ -72,7 +72,7 @@
         $uploaded_filename = $_FILES['userfile']['name'];
         $ext = pathinfo($uploaded_filename, PATHINFO_EXTENSION);
         if($_FILES["userfile"]["error"] > 0){
-            echo("<script>alert('Erreur lors du chargement du fichier. Veuillez réessayer. Si cela ne fonctionne toujours pas contacter : yac@nosleepingboy.fr')</script>");
+            echo("<script>alert('Erreur lors du chargement du fichier. Veuillez réessayer. Si cela ne fonctionne toujours pas contacter : yachef.h@gmail.com')</script>");
         }elseif ($ext != "xlsx") {
             echo ("<script>alert('Extension du fichier non prise en charge. Veuillez convertir votre fichier en .csv ou .xlsx')</script>");
         }else{
@@ -189,8 +189,8 @@
                     unlink($file);
                 }
                 $mail = new PHPMailer;
-                $mail->setFrom('yac@nosleepingboy.fr', 'No Sleeping Boy');
-                $mail->addReplyTo('yac@nosleepingboy.fr', 'No Sleeping Boy');
+                $mail->setFrom('yachef.h@gmail.com', 'No Sleeping Boy');
+                $mail->addReplyTo('yachef.h@gmail.com', 'No Sleeping Boy');
                 $mail->addAddress($EMAIL);
                 $mail->Subject = 'Vos attestations';
                 $mail->isHTML(true);
@@ -263,7 +263,7 @@
     </section>
     <section style = "background-color:#343C3E;">
     <div class = "text-center text-white" style= "margin:5px">
-       Besoin d'un site internet ou autre projet information ? Contactez moi à l'adresse :  <strong><a href = "mailto:yac@nosleepingboy.fr" class = "text-white">yac@nosleepingboy.com</a></strong> !
+       Besoin d'un site internet ou autre projet informatique ? Contactez moi à l'adresse :  <strong><a href = "mailto:yachef.h@gmail.com" class = "text-white">yac@nosleepingboy.com</a></strong> !
     </div>
     </section>
     <section class = "mb-5">
@@ -366,7 +366,7 @@
 </body>
 <footer class="fixed-bottom" style = "background-color:#343C3E;">
     <div class = "text-center text-white" style= "margin:5px">
-       Un Bug ou une question ? Contactez moi à l'adresse : <strong><a href = "mailto:yac@nosleepingboy.fr" class = "text-white">yac@nosleepingboy.fr</a></strong> !
+       Un Bug ou une question ? Contactez moi à l'adresse : <strong><a href = "mailto:yachef.h@gmail.com" class = "text-white">yachef.h@gmail.com</a></strong> !
     </div>
 </footer>
 <script src="/assets/jquery.min.js"></script>
