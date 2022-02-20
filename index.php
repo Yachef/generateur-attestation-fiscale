@@ -189,8 +189,8 @@
                     unlink($file);
                 }
                 $mail = new PHPMailer;
-                $mail->setFrom('yachef.h@gmail.com', 'No Sleeping Boy');
-                $mail->addReplyTo('yachef.h@gmail.com', 'No Sleeping Boy');
+                $mail->setFrom('yachef.h@gmail.com', 'Générateur attestation fiscale');
+                $mail->addReplyTo('yachef.h@gmail.com', 'Générateur attestation fiscale');
                 $mail->addAddress($EMAIL);
                 $mail->Subject = 'Vos attestations';
                 $mail->isHTML(true);
@@ -199,7 +199,7 @@
                 <p>Pour décompresser le fichier .zip, voici un tuto : https://www.youtube.com/watch?v=LWLLLIjxSOc</p>
                 <p>Pour tout bug ou questions, il vous suffira de répondre à ce mail !</p>
                 <p>Amicalement,</p>
-                <p>Yac de No Sleeping Boy</p>";
+                <p>Yac de Générateur attestation fiscale</p>";
                 $mail->Body = $mailContent;
 
                 // Send email
@@ -208,7 +208,7 @@
                     unlink($zipname);
                 }else{
                     unlink($zipname);
-                    header("Location: https://generateur-attestation.nosleepingboy.fr/mail.php");
+                    header("Location: https://generateur-attestation-fiscale.herokuapp.com/mail.php");
                     exit;
                 }
             } else {
@@ -237,7 +237,7 @@
     <a href="https://nosleepingboy.fr">
             <img src="images/no_sleeping_boy.png" style="height:40px;margin:10px">
         </a>
-        <a href="https://nosleepingboy.fr" style="color:black;">No Sleeping Boy</a>
+        <a href="https://nosleepingboy.fr" style="color:black;">Générateur attestation fiscale</a>
         <a href = "mentions-legales.php" class = "mr-3"style = "margin-left: auto;color:black;"target = "_blank">Mentions Légales</a>
         <a href = "cgu.php" style = "color:black;" target = "_blank" class = "mr-3">CGU</a>
     </div>
