@@ -16,7 +16,7 @@
 
 <body id="generation-attestation" style = "background-color:#EDEDEB;">
     <section class="d-flex align-items-center bg-white">
-        <a href="https://nosleepingboy.fr">
+        <a href="https://generateur-attestation-fiscale.herokuapp.com/">
             <img src="images/no_sleeping_boy.png" style="height:40px;margin:10px">
         </a>
         <a href="https://generateur-attestation-fiscale.herokuapp.com/" style="color:black;">Générateur d'Attestations fiscales</a>

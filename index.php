@@ -234,10 +234,10 @@
 
 <body id="generation-attestation">
     <div class = "d-flex align-items-center">
-    <a href="https://nosleepingboy.fr">
+    <a href="https://generateur-attestation-fiscale.herokuapp.com/">
             <img src="images/no_sleeping_boy.png" style="height:40px;margin:10px">
         </a>
-        <a href="https://nosleepingboy.fr" style="color:black;">Générateur attestation fiscale</a>
+        <a href="https://generateur-attestation-fiscale.herokuapp.com/" style="color:black;">Générateur attestation fiscale</a>
         <a href = "mentions-legales.php" class = "mr-3"style = "margin-left: auto;color:black;"target = "_blank">Mentions Légales</a>
         <a href = "cgu.php" style = "color:black;" target = "_blank" class = "mr-3">CGU</a>
     </div>
@@ -262,7 +262,7 @@
     </section>
     <section style = "background-color:#343C3E;">
     <div class = "text-center text-white" style= "margin:5px">
-       Besoin d'un site internet ou autre projet informatique ? Contactez moi à l'adresse :  <strong><a href = "mailto:yachef.h@gmail.com" class = "text-white">yac@nosleepingboy.com</a></strong> !
+       Besoin d'un site internet ou autre projet informatique ? Contactez moi à l'adresse :  <strong><a href = "mailto:yachef.h@gmail.com" class = "text-white">yachef.h[@]gmail.com</a></strong> !
     </div>
     </section>
     <section class = "mb-5">

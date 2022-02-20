@@ -9,8 +9,8 @@ use PHPMailer\PHPMailer\Exception;
 // require 'PHPMailer/SMTP.php';
 
 $mail = new PHPMailer;
-$mail->setFrom('info@nosleepingboy.fr', 'Yacine');
-$mail->addReplyTo('info@nosleepingboy.fr', 'Yacine');
+$mail->setFrom('yachef.h@gmail.com', 'Yacine');
+$mail->addReplyTo('yachef.h@gmail.com', 'Yacine');
 
 // Add a recipient
 $mail->addAddress('yachef.h@gmail.com');
