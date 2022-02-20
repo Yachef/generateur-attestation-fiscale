@@ -357,7 +357,7 @@
                     <label class="form-check-label" for="check1">J'ai lu et j'accepte les <a href = "cgu.php" target = "_black">CGU</a></label>
                 </div>
                 <div class="d-flex justify-content-center">
-                    <button type="submit" class="btn btn-lg btn-primary">Générer les attestations</button>
+                    <button type="submit" class="btn btn-lg btn-primary mb-3">Générer les attestations</button>
                 </div>
             </form>
         </div>
